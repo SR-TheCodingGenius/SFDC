@@ -1,50 +1,56 @@
 import { LightningElement, track } from 'lwc';
-
 export default class HelloWorld extends LightningElement 
 {
     @track buttonClickedLabel = '';
+    
+    num1 = 0;
+    count = 0;
+    operatorFlag = false;
+    previousOperatorClicked ='';
+    
     handleClick(event) 
     {
-        var num1 = 0;
-        var count = 0;
-        var operatorFlag = false;
-
-        if( Number(event.target.label) >= 0 && Number(event.target.label) <= 9)
+       if(isNaN(event.target.title) === false)
         {
-            if(operatorFlag === true)
-            {
-                num1 = Number(this.buttonClickedLabel);
-                this.buttonClickedLabel = '';
-                operatorFlag = false;
-            }
-            this.buttonClickedLabel += event.target.label;
-            
+                if(this.operatorFlag === true)
+                {
+                    this.num1 = Number(this.buttonClickedLabel);
+                    this.buttonClickedLabel = '';
+                    this.operatorFlag = false;
+                }
+                
+                this.buttonClickedLabel += event.target.title;
+                
         }
         else
         {
-            operatorFlag = true;
-            count++;
-            if(count > 1)
+            this.operatorFlag = true;
+            this.count++;
+            
+            if(this.count > 1)
             {
-                switch(event.target.label) 
+                switch(this.previousOperatorClicked) 
                 {
-                    case "+":
-                    num1 += Number(this.buttonClickedLabel);
+                    case "plus":
+                    this.num1 += Number(this.buttonClickedLabel);
                     break;
-                    case "-":
-                    num1 -= Number(this.buttonClickedLabel);
+                    case "minus":
+                    this.num1 -= Number(this.buttonClickedLabel);
                     break;
-                    case "/":
-                    num1 /= Number(this.buttonClickedLabel);
+                    case "div":
+                    this.num1 /= Number(this.buttonClickedLabel);
                     break;
-                    case "*":
-                    num1 *= Number(this.buttonClickedLabel);
+                    case "mul":
+                    this.num1 *= Number(this.buttonClickedLabel);
                     break;
                     default:
                     break;
                     
                 }
+                this.buttonClickedLabel = this.num1;
             }
+            this.previousOperatorClicked = event.target.title;
+            
         }
     }
 

@@ -1,38 +1,35 @@
 <template>
     <lightning-card title="Lightning Calculator" icon-name="custom:custom14">
         <div class="slds-m-top_medium slds-m-bottom_x-small">
-            <!-- <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-                Lightning Calculator!!!
-         </h2>  -->
-         <lightning-input readonly value={buttonClickedLabel} ></lightning-input>
+              <lightning-input readonly value={buttonClickedLabel} ></lightning-input>
         </div>
         
         <div class="Row1">
-               <lightning-button label="1" title="one" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-               <lightning-button label="2" title="two"  onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-               <lightning-button label="3" title="three" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-               <lightning-button label="-" title="minus"  class="slds-m-left_x-small"></lightning-button>
+               <lightning-button label="1" title="1"     onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+               <lightning-button label="2" title="2"     onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+               <lightning-button label="3" title="3"     onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+               <lightning-button label="-" title="minus" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
         </div>
         
         <div class="Row2">
-                <lightning-button label="4" title="four" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="5" title="five" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="6" title="six" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="*" title="mul"  class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="4" title="4"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="5" title="5"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="6" title="6"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="*" title="mul" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
          </div>
 
          <div class="Row3">
-                <lightning-button label="7" title="seven" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="8" title="eight" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="9" title="nine" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="/" title="div"  class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="7" title="7"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="8" title="8"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="9" title="9"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="/" title="div" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
          </div>
 
          <div class="Row4">
-                <lightning-button label="0" title="zero" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="." title="dot"  class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="+" title="plus"  class="slds-m-left_x-small"></lightning-button>
-                <lightning-button label="=" title="equals"  class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="0" title="0"     onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="." title="dot"    onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="+" title="plus"   onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+                <lightning-button label="=" title="equals" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
          </div>
     </lightning-card>
    
